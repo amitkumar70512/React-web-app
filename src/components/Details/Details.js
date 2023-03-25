@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 
+
 import Navbar from "../Navbar";
 import GenreButton from "./style";
 
@@ -8,7 +9,7 @@ const API_KEY = "3e99401540a1842231b61f8caaca2b56";
 
 
 const Details = (props) => {
-
+    
     const { movieId } = useParams()
     const [result, setResult] = useState(null);
 
@@ -28,7 +29,6 @@ const Details = (props) => {
     useEffect(() => {
         query();
     })
-
 
 
     return (

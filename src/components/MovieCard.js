@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { UserContext } from '../App';
+import { Link } from 'react-router-dom';
 
 import '../App.css';
 import IconButton from '@mui/material/IconButton';
@@ -23,10 +24,12 @@ function MovieItem(props) {
                         <i>Average Votes <span>{props.avg_vote}</span></i>
                     </div>
 
-                    <p className="card-text"> <a href={`/detail/${props.id} `} onClick={() => props.readMore(props.id)}>Read more</a></p>
+                    <p className="card-text"> 
+                    
+                    <Link to={`/detail/${props.id} `} style={{ color: 'blue', textDecoration: 'none' }}> Read more</Link>
+                    </p>
 
                     <IconButton aria-label="add to favorites" style={{ color: "red" }} onClick={() => handleLike(props.title)}>
-                        {/* <IconButton aria-label="add to favorites" style={{ color: "red" }} onClick={() => props.handleLike(props.title)}> */}
                         <FavoriteIcon />
                     </IconButton>
                     <IconButton aria-label="share" style={{ color: "#233f57" }} onClick={() => props.handleShare()}>

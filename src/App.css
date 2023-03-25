@@ -50,9 +50,7 @@
 
 /* card */
 
-.container.card IconButton {
-  color: red;
-}
+
 
 .card {
   cursor: pointer;
